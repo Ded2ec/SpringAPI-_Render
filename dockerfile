@@ -12,7 +12,11 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 # ตั้งค่า Environment Variables
-ENV SPRING_DATASOURCE_URL=jdbc:postgresql://postgresdb_lb2a_user:rUAomgBz9OHTBxtyDUyfu3IEz2Rg0DPY@dpg-csid5jggph6c738gb7c0-a.singapore-postgres.render.com/postgresdb_lb2a
+# ENV SPRING_DATASOURCE_URL=jdbc:postgresql://postgresdb_lb2a_user:rUAomgBz9OHTBxtyDUyfu3IEz2Rg0DPY@dpg-csid5jggph6c738gb7c0-a.singapore-postgres.render.com/postgresdb_lb2a
+# ENV SPRING_DATASOURCE_USERNAME=postgresdb_lb2a_user
+# ENV SPRING_DATASOURCE_PASSWORD=rUAomgBz9OHTBxtyDUyfu3IEz2Rg0DPY
+
+ENV SPRING_DATASOURCE_URL=jdbc:postgresql://dpg-csid5jggph6c738gb7c0-a.singapore-postgres.render.com:5432/postgresdb_lb2a
 ENV SPRING_DATASOURCE_USERNAME=postgresdb_lb2a_user
 ENV SPRING_DATASOURCE_PASSWORD=rUAomgBz9OHTBxtyDUyfu3IEz2Rg0DPY
 
